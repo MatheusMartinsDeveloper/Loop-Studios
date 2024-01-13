@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .line-animation::after {
+        content: "";
+        width: 0%;
+        height: 4px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .3s ease-in-out;
+    }
+
+    .line-animation:hover::after {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background-color: white;
+    }
+}
